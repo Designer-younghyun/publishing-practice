@@ -1,0 +1,282 @@
+#wrap {
+    display: flex;
+    justify-content: center;
+}
+#wrap-center{
+    width: 1280px;
+    height: 1080px;
+}
+
+html, body, form {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.4px;
+}
+html, body, form, ul {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "malgun gothic", 맑은 고딕, "Helvetica Neue", Arial, sans-serif;
+}
+.blind {
+    display: none;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+     /* position: absolute; ← 삭제 */
+}
+#header-first, #header-second {
+    display: flex;
+    padding: 8px;
+    width: 32px
+     /* position: absolute; ← 삭제 */
+}
+#header-hamburger, #header-pay, #topNotiButton, #topShoppingButton {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff; /*none 이 왜 안 먹히지*/
+    border: none;
+    background-image: url(/sp_main.png);
+    background-size: 471px 455px;
+    background-repeat: no-repeat;       
+    cursor: pointer;
+    padding: 8px;
+}
+#header-hamburger {
+    background-position: -311px -151px;
+    display: block;
+     /* position: relative; top: 5px; left: -8px; ← 다 삭제. align-items:center가 정렬 담당 */
+}
+#header-hamburger::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+#header-pay {
+    background-position: 0px -318px;
+    display: block;
+     /* position: relative; top: 5px; left: -8px; ← 다 삭제. align-items:center가 정렬 담당 */
+}
+#topNotiArea {
+    padding: 8px;
+    display: flex;
+    align-items: center;    
+    margin-left: auto;
+    /* margin-left: auto로 "오른쪽 끝까지 밀기" 역할 */
+}
+#topNotiButton {
+    background-position: -311px -217px;
+    /* position: relative; top: 5px; right: -44px; ← 다 삭제 */
+    /* display:flex; justify-content:space-between; ← 버튼 안에 자식 요소 없으면 의미 없어서 삭제 가능 */
+}
+#topShoppingArea {
+    padding: 8px;
+    display: flex;
+    align-items: center;    
+}
+#topShoppingButton {
+    background-position: -66px -318px;
+    /* position: relative; top: 5px; right: -44px; ← 다 삭제 */
+    /* display:flex; justify-content:space-between; ← 버튼 안에 자식 요소 없으면 의미 없어서 삭제 가능 */
+}
+#search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-area > form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 708px;
+    height: 58px;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+    text-align: left;
+}
+#search-area > form:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+}
+#search-area > form > input {
+    width: 480px;
+    height: 58px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* padding을 border에 포함 >> 이건 아직 미숙함 */
+}
+#search-area > form > a {
+    width: 67px;
+    height: 58px;
+}
+#search-area > form > a > svg {
+    width: 24px;
+    height: 24px;
+    fill: #03c75a;
+}
+#search-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-input {
+    width: 480px;
+    height: 58px;
+    padding: 17px 0;
+    font-size: 1.5rem;
+    line-height: 24px;
+    font-weight: medium;
+}
+#search-input::placeholder {
+    color: #ffffff;
+}
+#search-input:focus::placeholder {
+    color: #e4e4e4;
+}
+#search-right {
+    flex: 1; /* 나머지 공간을 모두 차지 >> 이걸 잘 사용하는지 모르겠음 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 8px;
+    padding: 9px 9px 9px 10px;
+}
+#search-tools {
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+#search-keyboard, #search-ai{
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+#search-keyboard {
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.65843251.png);
+    background-size: 471px 455px;
+    background-position: -100px -416px;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+}
+#search-ai {
+    width: 71px;
+    height: 40px;
+    background-image: url(https://s.pstatic.net/static/www/mobile/edit/20260422_0/upload_1776849100838amPTl.png);
+    background-size: cover;
+    background-color: #e9faf9;
+    padding: 9px 9px 9px 10px;
+    border-radius: 33px;
+}
+#navigation > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+}
+#navigation li a {
+    text-decoration: none;
+    color: #2e2e2e;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /*a가 이제 아이콘 div + 텍스트 span을 세로로 쌓고 가로 중앙 정렬하는 역할을 맡고, div는 원래 목적대로 아이콘 배경(원형)과 아이콘 이미지를 담는 박스 역할만 하도록 되돌렸어요.*/
+    text-decoration: none;
+}
+#navigation {
+    margin-top: 12px;
+}
+#navigation li a div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+#navigation li a div::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -3px;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.65843251.png);
+    background-size: 471px 455px;
+    background-position: -153px -142px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+#navigation li a div::after {
+    content: "";
+    position: relative;
+    z-index: 1;
+    display: block; /*::after도 기본 display는 inline이라, width/height를 줘도 무시돼요 — 1주차에 배우신 "inline은 width/height 무시" 규칙이 가상요소에도 그대로 적용돼요. display: block을 꼭 같이 줘야 해요.*/
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.65843251.png);
+    background-size: 471px 455px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+}
+#navigation li a span{
+    display: inline-block;
+    margin-top: 4px auto;
+}
+#navigation li a:visited {
+    color: #2e2e2e;
+    margin-left: 4px; 
+}
+#navigation li {
+    width: 64px;
+    margin-left: 4px;
+}
+#navigation li:nth-of-type(1) {
+    margin-left: 0px; 
+}
+#navigation li:nth-of-type(1) a div::after{
+    background-position: -205px -219px;
+}
+#navigation li:nth-of-type(2) a div::after{
+    background-position: -41px -219px;
+}
+#navigation li:nth-of-type(3) a div::after{
+    background-position: 0px -219px;    
+}
+#navigation li:nth-of-type(4) a div::after{
+    background-position: -41px -260px;
+}
+#navigation li:nth-of-type(5) a div::after{
+    background-position: -270px -205px;
+}
+#navigation li:nth-of-type(6) a div::after{
+    background-position: -123px -260px; 
+}
+#navigation li:nth-of-type(7) a div::after{
+    background-position: 0px -260px;
+}
+#navigation li:nth-of-type(8) a div::after{
+    background-position: -270px 0px;
+}
+#navigation li:nth-of-type(9) a div::after{
+    background-position: -164px -260px;
+}
+#navigation li:nth-of-type(10) a div::after{
+    background-image: url("./header_nav.png");
+    background-position: 0 0;      /* 스프라이트 좌표 초기화 */
+    background-size: contain;       /* 이미지를 있는 그대로 40x40 박스에 맞춤 */
+}
+#navigation li:nth-of-type(11) a div::after{
+    background-position: -270px -164px;
+}
