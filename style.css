@@ -479,6 +479,48 @@ section[id^="main"]{
 }
 #main-login{
     height: 164px;
+    padding: 21px 20px 18px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main-login > div:first-of-type {
+    line-height: 20px;
+}
+#main-login > div:last-of-type {
+    font-size: 1rem;
+    margin-top: 16px;
+}
+#main-login > div:last-of-type > a:nth-last-of-type(2)::before, #main-login > div:last-of-type > a:nth-last-of-type(2)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 4px 12px 0;
+    background-color: #d3d5d7;
+
+}
+#main-login-btn{
+    width: 380px;
+    height: 56px;
+    margin-top: 13px;
+    border-radius: 4px;
+    background-color: #03c75a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main-login-btn i {
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.65843251.png);
+    background-size: 471px 455px;
+    background-position: -130px -301px;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 14px;
+    display: inline-block;
+    margin: 3px 8px 0 0;
 }
 #main-right-ad{
     height: 240px;
