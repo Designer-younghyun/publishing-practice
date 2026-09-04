@@ -1,0 +1,10 @@
+@import "tailwindcss"; /* 첫 줄 @import "tailwindcss";가 Tailwind를 켜는 스위치 */
+
+body {
+  background: #ffffff;
+  color: #212124;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Helvetica Neue", Arial, sans-serif;
+}
